@@ -1,7 +1,7 @@
 {
-    "name": "remix-redis-session",
-    "version": "0.0.12",
-    "description": "Redis session storage for Remix",
+    "name": "react-router-redis-session",
+    "version": "0.0.1",
+    "description": "Redis session storage for React Router v7",
     "main": "dist/index.js",
     "files": [
         "dist/**"
