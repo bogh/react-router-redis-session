@@ -1,12 +1,16 @@
-# remix-redis-session
+# react-router-redis-session
 
-A simple library to use redis as your session backing store in your remix project
+A simple library to use redis as your session backing store in your react router (ex. remix) project
 
 ## Install
 
-`npm install remix-redis-session` or `yarn add remix-redis-session`
+`npm install react-router-redis-session`
 
-## Api
+`yarn add react-router-redis-session`
+
+`pnpm add react-router-redis-session`
+
+## API
 
 ```ts
 createRedisSessionStorage({
@@ -63,8 +67,3 @@ export const sessionStorage = createRedisSessionStorage({
     }
 });
 ```
-
-## Buy me a coffee :)
-
-[:heart: Sponsor](https://github.com/sponsors/DAlperin)
-
