@@ -67,3 +67,20 @@ export const sessionStorage = createRedisSessionStorage({
     }
 });
 ```
+
+For typing the data inside the session you can pass two generics to `createRedisSessionStorage`.
+See https://github.com/remix-run/react-router/blob/2b12d33024a136292e95cb2aebb00b1b5cb606d9/packages/react-router/lib/server-runtime/sessions.ts#L169
+
+```ts
+
+interface SessionData {
+    user?: string;
+}
+
+export const sessionStorage = createRedisSessionStorage<SessionData>({
+    ...
+});
+
+
+
+```

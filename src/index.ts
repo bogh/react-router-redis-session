@@ -2,6 +2,7 @@ import { randomBytes as crypto_randomBytes } from "node:crypto";
 
 import Redis from "ioredis";
 import {
+	type SessionData,
 	type SessionIdStorageStrategy,
 	type SessionStorage,
 	createSessionStorage,
@@ -29,10 +30,10 @@ type RedisSessionConfig = {
 	};
 };
 
-export function createRedisSessionStorage({
-	cookie,
-	options,
-}: RedisSessionConfig): SessionStorage {
+export function createRedisSessionStorage<
+	Data = SessionData,
+	FlashData = Data,
+>({ cookie, options }: RedisSessionConfig): SessionStorage<Data, FlashData> {
 	let redis: Redis.Redis;
 	if (options.redisClient) {
 		redis = options.redisClient;
